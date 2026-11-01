@@ -1,0 +1,6 @@
+{
+  "name": "LastBite - Cứu Món Ngon Cuối Ngày",
+  "description": "Nền tảng cứu món ngon cuối ngày tại Cầu Giấy, Hà Nội. Giảm lãng phí thực phẩm với Túi Bất Ngờ -50% và giảm giá giờ vàng dành cho người mua và quán ăn.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

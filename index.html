@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Fix for extensions or environments where window.fetch is getter-only
+      (function() {
+        try {
+          var currentFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return currentFetch;
+            },
+            set: function(newFetch) {
+              currentFetch = newFetch;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // Silently fall back if already defined
+        }
+      })();
+    </script>
+    <title>LastBite - Cứu Món Ngon Cuối Ngày</title>
+    <meta name="description" content="Nền tảng cứu món ngon cuối ngày tại Cầu Giấy, Hà Nội. Giảm lãng phí thực phẩm với Túi Bất Ngờ -50% và giảm giá giờ vàng dành cho người mua và quán ăn." />
+    <meta property="og:title" content="LastBite - Cứu Món Ngon Cuối Ngày" />
+    <meta property="og:description" content="Nền tảng cứu món ngon cuối ngày tại Cầu Giấy, Hà Nội. Giảm lãng phí thực phẩm với Túi Bất Ngờ -50% và giảm giá giờ vàng dành cho người mua và quán ăn." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-stone-50 text-stone-900 font-sans antialiased selection:bg-amber-100 selection:text-amber-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
